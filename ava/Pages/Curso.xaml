@@ -4,10 +4,84 @@
              x:Class="ava.Pages.Curso"
              Title="Curso">
     <StackLayout Padding="20">
-        <!-- Aqui você terá o grid futuramente -->
 
-        <Label Text="Aqui conterá um grid..." />
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-        <Button Text="Inserir" Clicked="OnInserirClicked" />
+            <!-- Curso 1 -->
+            <Border Stroke="#2e2e2e" StrokeShape="RoundRectangle 8">
+                <Grid ColumnDefinitions="*, Auto, Auto"
+                  Padding="10"
+                  ColumnSpacing="10">
+
+                    <Label Text="Ciência da Computação"
+                       TextColor="White"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+
+                    <Button Text="Editar"
+                        BackgroundColor="#B03A7E"
+                        TextColor="White"
+                        HeightRequest="35"
+                        WidthRequest="70"
+                        FontSize="14"
+                        CornerRadius="6"
+                        Grid.Column="1"
+                        VerticalOptions="Center" />
+
+                    <Button Text="Excluir"
+                        BackgroundColor="#C0392B"
+                        TextColor="White"
+                        HeightRequest="35"
+                        WidthRequest="70"
+                        FontSize="14"
+                        CornerRadius="6"
+                        Grid.Column="2"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Border>
+
+            <!-- Curso 2 -->
+            <Border Stroke="#2e2e2e" StrokeShape="RoundRectangle 8">
+                <Grid ColumnDefinitions="*, Auto, Auto"
+                  Padding="10"
+                  ColumnSpacing="10">
+
+                    <Label Text="Engenharia de Software"
+                       TextColor="White"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+
+                    <Button Text="Editar"
+                        BackgroundColor="#B03A7E"
+                        TextColor="White"
+                        HeightRequest="35"
+                        WidthRequest="70"
+                        FontSize="14"
+                        CornerRadius="6"
+                        Grid.Column="1"
+                        VerticalOptions="Center" />
+
+                    <Button Text="Excluir"
+                        BackgroundColor="#C0392B"
+                        TextColor="White"
+                        HeightRequest="35"
+                        WidthRequest="70"
+                        FontSize="14"
+                        CornerRadius="6"
+                        Grid.Column="2"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Border>
+
+            <Button Text="Inserir Curso"
+        BackgroundColor="#C3A6F7"
+        TextColor="Black"
+        FontAttributes="Bold"
+        HeightRequest="50"
+        CornerRadius="10"
+        Clicked="OnInserirClicked"></Button>
+
+
+        </VerticalStackLayout>
     </StackLayout>
 </ContentPage>

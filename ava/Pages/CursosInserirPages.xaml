@@ -3,12 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.CursosInserirPages"
              Title="CursosInserirPages">
-    <StackLayout Padding="20">
-        <Label Text="Aqui conterão campos para preencher o cadastro do novo estado." />
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Cadastro de Curso" FontSize="Large" HorizontalOptions="Center" />
 
-        <!-- Seus campos virão aqui -->
+            <Label Text="Nome do Curso" />
+            <Entry x:Name="entryNomeCurso" Placeholder="Digite o nome do curso" />
 
-        <Button Text="Salvar" />
-        <Button Text="Voltar" Clicked="OnVoltarClicked"/>
-    </StackLayout>
+            <Label Text="Descrição" />
+            <Editor x:Name="editorDescricao" Placeholder="Digite a descrição do curso" AutoSize="TextChanges" />
+
+            <Label Text="Carga Horária (em horas)" />
+            <Entry x:Name="entryCargaHoraria" Placeholder="Ex: 40" Keyboard="Numeric" />
+
+            <Label Text="Nível" />
+            <Picker x:Name="pickerNivel" Title="Selecione o nível do curso">
+                <Picker.Items>
+                    <x:String>Técnico</x:String>
+                    <x:String>Graduação</x:String>
+                    <x:String>Pós-Graduação</x:String>
+                    <x:String>Mestrado</x:String>
+                    <x:String>Doutorado</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Período" />
+            <Picker x:Name="pickerPeriodo" Title="Selecione o período">
+                <Picker.Items>
+                    <x:String>Matutino</x:String>
+                    <x:String>Vespertino</x:String>
+                    <x:String>Noturno</x:String>
+                    <x:String>Integral</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
+                <Button Text="Salvar" />
+                <Button Text="Voltar"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.Sobre"
              Title="Sobre">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Sistema AVA"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="#8AB4F8"
+                   HorizontalOptions="Center" />
+
+        <BoxView HeightRequest="2" Color="#8AB4F8" HorizontalOptions="Fill" />
+
+        <Label Text="O AVA (Ambiente Virtual de Aprendizagem) é o sistema oficial da faculdade para gerenciamento de cursos, conteúdos e comunicação entre alunos e professores."
+                   FontSize="18"
+                   TextColor="White"
+                   LineHeight="1.4" />
+
+        <Label Text="Este aplicativo está sendo desenvolvido com .NET MAUI por Caio Martin do Nascimento para proporcionar uma experiência moderna, responsiva e acessível em diferentes plataformas."
+                   FontSize="18"
+                   TextColor="White"
+                   LineHeight="1.4" />
+
+        <Label Text="Funcionalidades atuais:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#8AB4F8" />
+
+
     </VerticalStackLayout>
+
+
 </ContentPage>

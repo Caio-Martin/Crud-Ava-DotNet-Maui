@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ava.Pages.DisciplinaInserirPages"
+             Title="DisciplinaInserirPages">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Cadastro de Disciplina" FontSize="Large" HorizontalOptions="Center" />
+
+            <Label Text="Nome da Disciplina" />
+            <Entry x:Name="entryNomeDisciplina" Placeholder="Digite o nome da disciplina" />
+
+            <Label Text="Descrição" />
+            <Editor x:Name="editorDescricaoDisciplina" Placeholder="Digite uma descrição (opcional)" AutoSize="TextChanges" />
+
+            <Label Text="Carga Horária (em horas)" />
+            <Entry x:Name="entryCargaHorariaDisciplina" Placeholder="Ex: 60" Keyboard="Numeric" />
+
+            <Label Text="Curso Vinculado" />
+            <Picker x:Name="pickerCurso" Title="Selecione o curso" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
+                <Button Text="Salvar" />
+                <Button Text="Voltar" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -3,10 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.Periodos"
              Title="Periodos">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Curso 1 -->
+        <Border Stroke="#2e2e2e" StrokeShape="RoundRectangle 8">
+            <Grid ColumnDefinitions="*, Auto, Auto"
+           Padding="10"
+           ColumnSpacing="10">
+
+                <Label Text="Primeiroperiodo"
+                TextColor="White"
+                FontSize="18"
+                VerticalOptions="Center" />
+
+                <Button Text="Editar"
+                 BackgroundColor="#B03A7E"
+                 TextColor="White"
+                 HeightRequest="35"
+                 WidthRequest="70"
+                 FontSize="14"
+                 CornerRadius="6"
+                 Grid.Column="1"
+                 VerticalOptions="Center" />
+
+                <Button Text="Excluir"
+                 BackgroundColor="#C0392B"
+                 TextColor="White"
+                 HeightRequest="35"
+                 WidthRequest="70"
+                 FontSize="14"
+                 CornerRadius="6"
+                 Grid.Column="2"
+                 VerticalOptions="Center" />
+            </Grid>
+        </Border>
+
+        <!-- Curso 2 -->
+        <Border Stroke="#2e2e2e" StrokeShape="RoundRectangle 8">
+            <Grid ColumnDefinitions="*, Auto, Auto"
+           Padding="10"
+           ColumnSpacing="10">
+
+                <Label Text="Segundo periodo"
+                TextColor="White"
+                FontSize="18"
+                VerticalOptions="Center" />
+
+                <Button Text="Editar"
+                 BackgroundColor="#B03A7E"
+                 TextColor="White"
+                 HeightRequest="35"
+                 WidthRequest="70"
+                 FontSize="14"
+                 CornerRadius="6"
+                 Grid.Column="1"
+                 VerticalOptions="Center" />
+
+                <Button Text="Excluir"
+                 BackgroundColor="#C0392B"
+                 TextColor="White"
+                 HeightRequest="35"
+                 WidthRequest="70"
+                 FontSize="14"
+                 CornerRadius="6"
+                 Grid.Column="2"
+                 VerticalOptions="Center" />
+            </Grid>
+        </Border>
+
+        <Button Text="Inserir Periodo"
+        x:Name="btnInserirPeriodo"
+        BackgroundColor="#C3A6F7"
+        TextColor="Black"
+        FontAttributes="Bold"
+        HeightRequest="50"
+        CornerRadius="10"
+        Clicked="OnInserirClicked"/>
+
     </VerticalStackLayout>
 </ContentPage>

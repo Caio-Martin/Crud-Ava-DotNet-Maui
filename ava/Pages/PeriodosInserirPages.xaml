@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ava.Pages.PeriodosInserirPages"
+             Title="PeriodosInserirPages">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Cadastro de Período" FontSize="Large" HorizontalOptions="Center" />
+
+            <Label Text="Nome do Período" />
+            <Entry x:Name="entryNomePeriodo" Placeholder="Ex: 1º Semestre 2025" />
+
+            <Label Text="Data de Início" />
+            <DatePicker x:Name="dateInicio" />
+
+            <Label Text="Data de Término" />
+            <DatePicker x:Name="dateTermino" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
+                <Button Text="Salvar" />
+                <Button Text="Voltar" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
