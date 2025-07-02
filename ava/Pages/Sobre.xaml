@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.Sobre"
-             Title="Sobre">
+             Title="Sobre"
+             BackgroundColor="Black">
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label Text="Sistema AVA"
                    FontSize="32"
@@ -22,10 +23,6 @@
                    TextColor="White"
                    LineHeight="1.4" />
 
-        <Label Text="Funcionalidades atuais:"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   TextColor="#8AB4F8" />
 
 
     </VerticalStackLayout>

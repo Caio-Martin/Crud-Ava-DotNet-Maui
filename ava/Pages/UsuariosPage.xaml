@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ava.Pages.Periodos"
-             Title="Periodos"
+             x:Class="ava.Pages.UsuariosPage"
+             Title="Usuários"
              BackgroundColor="Black">
 
     <VerticalStackLayout Padding="20" Spacing="20">
-        <CollectionView x:Name="listaPeriodos">
+
+        <SearchBar x:Name="searchBarUsuario"
+                   Placeholder="Pesquisar por nome"
+                   TextColor="White"
+                   PlaceholderColor="Gray"
+                   BackgroundColor="#2a2a2a"
+                   FontSize="16"
+                   TextChanged="OnSearchTextChanged" />
+
+        <CollectionView x:Name="listaUsuarios">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border Stroke="#2e2e2e" StrokeShape="RoundRectangle 8" Padding="10">
+                    <Border Stroke="#444" StrokeShape="RoundRectangle 10" Margin="0,5" Padding="10">
                         <Grid ColumnDefinitions="*, Auto, Auto" ColumnSpacing="10">
-                            <Label Text="{Binding CodigoNome}"
-                                   TextColor="White"
+                            <Label Text="{Binding Exibicao}"
                                    FontSize="18"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
                                    VerticalOptions="Center" />
+
                             <Button Text="Editar"
                                     BackgroundColor="#B03A7E"
                                     TextColor="White"
                                     WidthRequest="70"
+                                    CornerRadius="8"
                                     Grid.Column="1"
                                     Clicked="OnEditarClicked" />
-                            <Button Text="Exclui"
+
+                            <Button Text="Excluir"
                                     BackgroundColor="#C0392B"
                                     TextColor="White"
                                     WidthRequest="70"
+                                    CornerRadius="8"
                                     Grid.Column="2"
                                     Clicked="OnExcluirClicked" />
                         </Grid>
@@ -33,12 +47,13 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Button Text="Inserir Período"
+        <Button Text="Inserir Usuário"
                 BackgroundColor="#C3A6F7"
                 TextColor="Black"
                 FontAttributes="Bold"
+                FontSize="16"
                 HeightRequest="50"
-                CornerRadius="10"
+                CornerRadius="12"
                 Clicked="OnInserirClicked" />
     </VerticalStackLayout>
 </ContentPage>

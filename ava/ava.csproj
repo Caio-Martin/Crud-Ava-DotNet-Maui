@@ -62,16 +62,17 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\Curso.xaml">
+	  <MauiXaml Update="Pages\CursoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\CursosInserirPages.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Disciplina.xaml">
+	  <MauiXaml Update="Pages\DisciplinaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\DisciplinaInserirPages.xaml">
@@ -89,6 +90,21 @@
 	  <MauiXaml Update="Pages\TelaDeLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\UsuariosInserirPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\UsuariosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\CursoPage.xaml.cs">
+	    <DependentUpon>CursoPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\DisciplinaPage.xaml.cs">
+	    <DependentUpon>DisciplinaPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:ava"
     xmlns:pages="clr-namespace:ava.Pages"
     Shell.FlyoutBehavior="Flyout"
-    Title="ava">
+    Title="ava"
+    BackgroundColor="WhiteSmoke">
 
     <!-- Header Flyout -->
     <Shell.FlyoutHeader>
@@ -21,30 +22,41 @@
         <Label Text="Copyright © Caio M." FontSize="12" HorizontalOptions="Center" Margin="0,10" />
     </Shell.FlyoutFooter>
 
-    <!-- FlyoutItem - TabBar embutida -->
     <FlyoutItem Title="Menu Principal" Icon="menu.png" FlyoutDisplayOptions="AsMultipleItems">
 
-        <Tab Title="Home" Icon="home.png">
+        <!--<Tab Title="Home" Icon="home.png">
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" />
-        </Tab>
+        </Tab>-->
+
+
 
         <Tab Title="Cursos" Icon="cursos.png">
-            <ShellContent Title="Cursos" ContentTemplate="{DataTemplate pages:Curso}" />
+            <ShellContent Title="Cursos" ContentTemplate="{DataTemplate pages:CursoPage}" />
         </Tab>
 
 
         <Tab Title="Disciplinas" Icon="disciplinas.png">
-            <ShellContent Title="Disciplinas" ContentTemplate="{DataTemplate pages:Disciplina}" />
+            <ShellContent Title="Disciplinas" ContentTemplate="{DataTemplate pages:DisciplinaPage}" />
         </Tab>
 
         <Tab Title="Períodos" Icon="periodos.png">
             <ShellContent Title="Períodos" ContentTemplate="{DataTemplate pages:Periodos}" />
         </Tab>
 
+        <Tab Title="Usuários" Icon="home.png">
+            <ShellContent Title="Usuários" ContentTemplate="{DataTemplate pages:UsuariosPage}" />
+        </Tab>
 
         <Tab Title="Sobre" Icon="sobre.png">
             <ShellContent Title="Sobre" ContentTemplate="{DataTemplate pages:Sobre}" />
         </Tab>
 
+
+
+
+
+
+
     </FlyoutItem>
 </Shell>
+ 

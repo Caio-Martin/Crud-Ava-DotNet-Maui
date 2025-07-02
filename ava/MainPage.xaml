@@ -6,7 +6,6 @@
 
     <VerticalStackLayout Padding="20" Spacing="20">
 
-        <!-- Cabeçalho -->
         <Border Stroke="Gray" Padding="10" StrokeShape="RoundRectangle 10">
             <Grid ColumnDefinitions="Auto, *, Auto" RowDefinitions="Auto, Auto">
                 <Image Source="foto_aluno.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill"

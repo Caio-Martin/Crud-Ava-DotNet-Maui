@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.DisciplinaInserirPages"
-             Title="DisciplinaInserirPages">
+             Title="DisciplinaInserirPages"
+             BackgroundColor="White">
     <ScrollView>
         <StackLayout Padding="20" Spacing="15">
             <Label Text="Cadastro de Disciplina" FontSize="Large" HorizontalOptions="Center" />
@@ -10,18 +11,23 @@
             <Label Text="Nome da Disciplina" />
             <Entry x:Name="entryNomeDisciplina" Placeholder="Digite o nome da disciplina" />
 
-            <Label Text="Descrição" />
+            <Label Text="Sigla da Disciplina" />
+            <Entry x:Name="entrySiglaDisciplina" Placeholder="Ex: BD, SEG, WEB" />
+
+            <Label Text="Observações" />
             <Editor x:Name="editorDescricaoDisciplina" Placeholder="Digite uma descrição (opcional)" AutoSize="TextChanges" />
 
             <Label Text="Carga Horária (em horas)" />
             <Entry x:Name="entryCargaHorariaDisciplina" Placeholder="Ex: 60" Keyboard="Numeric" />
 
             <Label Text="Curso Vinculado" />
-            <Picker x:Name="pickerCurso" Title="Selecione o curso" />
+            <Picker x:Name="pickerCurso"
+                Title="Selecione o curso"
+                ItemDisplayBinding="{Binding CurNome}" />
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
-                <Button Text="Salvar" />
-                <Button Text="Voltar" />
+                <Button Text="Salvar" Clicked="OnSalvarClicked" />
+                <Button Text="Voltar" Clicked="OnVoltarClicked" />
             </StackLayout>
         </StackLayout>
     </ScrollView>

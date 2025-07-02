@@ -5,6 +5,8 @@
         public AppShell()
         {
             InitializeComponent();
+            CurrentItem = this.Items[0];
         }
+
     }
 }

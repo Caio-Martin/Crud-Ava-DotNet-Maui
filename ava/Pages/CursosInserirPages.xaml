@@ -2,44 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ava.Pages.CursosInserirPages"
-             Title="CursosInserirPages">
+             Title="Cadastrar Curso"
+             BackgroundColor="White">
+
     <ScrollView>
         <StackLayout Padding="20" Spacing="15">
             <Label Text="Cadastro de Curso" FontSize="Large" HorizontalOptions="Center" />
 
             <Label Text="Nome do Curso" />
-            <Entry x:Name="entryNomeCurso" Placeholder="Digite o nome do curso" />
+            <Entry x:Name="entryNomeCurso" Placeholder="Ex: Sistemas de Informação" />
 
-            <Label Text="Descrição" />
-            <Editor x:Name="editorDescricao" Placeholder="Digite a descrição do curso" AutoSize="TextChanges" />
+            <Label Text="Sigla do Curso" />
+            <Entry x:Name="entrySiglaCurso" Placeholder="Ex: SI, ADM, ENG" />
 
-            <Label Text="Carga Horária (em horas)" />
-            <Entry x:Name="entryCargaHoraria" Placeholder="Ex: 40" Keyboard="Numeric" />
+            <Label Text="Observações" />
+            <Editor x:Name="editorDescricaoCurso" Placeholder="Digite uma descrição (opcional)" AutoSize="TextChanges" />
+
+            <Label Text="Carga Horária" />
+            <Entry x:Name="entryCargaHorariaCurso" Placeholder="Ex: 3000 horas" />
 
             <Label Text="Nível" />
-            <Picker x:Name="pickerNivel" Title="Selecione o nível do curso">
-                <Picker.Items>
-                    <x:String>Técnico</x:String>
-                    <x:String>Graduação</x:String>
-                    <x:String>Pós-Graduação</x:String>
-                    <x:String>Mestrado</x:String>
-                    <x:String>Doutorado</x:String>
-                </Picker.Items>
+            <Picker x:Name="pickerNivel" Title="Selecione o nível">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Tecnólogo</x:String>
+                        <x:String>Bacharelado</x:String>
+                        <x:String>Licenciatura</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
             </Picker>
 
             <Label Text="Período" />
             <Picker x:Name="pickerPeriodo" Title="Selecione o período">
-                <Picker.Items>
-                    <x:String>Matutino</x:String>
-                    <x:String>Vespertino</x:String>
-                    <x:String>Noturno</x:String>
-                    <x:String>Integral</x:String>
-                </Picker.Items>
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Matutino</x:String>
+                        <x:String>Vespertino</x:String>
+                        <x:String>Noturno</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
             </Picker>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Margin="0,20,0,0">
-                <Button Text="Salvar" />
-                <Button Text="Voltar"/>
+                <Button Text="Salvar" Clicked="OnSalvarClicked" />
+                <Button Text="Voltar" Clicked="OnVoltarClicked" />
             </StackLayout>
         </StackLayout>
     </ScrollView>
